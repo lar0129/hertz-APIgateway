@@ -7,7 +7,7 @@ import (
 
 func GetResolvedIdl() (*generic.ThriftContentProvider, error) {
 	// 动态解析
-	path := "../idl/stu.thrift"
+	path := "../idl/teacher.thrift"
 	content, err := ioutil.ReadFile(path)
 	if err != nil {
 		panic(err)

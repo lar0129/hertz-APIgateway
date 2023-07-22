@@ -40,7 +40,7 @@ func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response int
 
 	// get the client from etcd
 	//cli, err := genericclient.NewClient("student-server", g, client.WithHostPorts("127.0.0.1:9999")) // 直接连接
-	cli, err = genericclient.NewClient("student-server", g, client.WithResolver(r),
+	cli, err = genericclient.NewClient("teacher-server", g, client.WithResolver(r),
 		client.WithLoadBalancer(loadbalance.NewWeightedRandomBalancer()))
 	if err != nil {
 		panic(err)
