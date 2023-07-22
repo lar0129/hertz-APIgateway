@@ -6,6 +6,7 @@ import (
 	"github.com/cloudwego/kitex/client"
 	"github.com/cloudwego/kitex/client/genericclient"
 	"github.com/cloudwego/kitex/pkg/generic"
+	"github.com/cloudwego/kitex/pkg/loadbalance"
 	etcd "github.com/kitex-contrib/registry-etcd"
 
 	"hertz.demo/biz/idl"
@@ -17,6 +18,7 @@ var cli genericclient.Client
 func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response interface{}) {
 
 	// 解析IDL文件
+
 	// 直接解析
 	// p, err := generic.NewThriftFileProvider("idl/stu.thrift")
 	// if err != nil {
@@ -36,13 +38,10 @@ func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response int
 	}
 	r, err := etcd.NewEtcdResolver([]string{"127.0.0.1:2379"})
 
-	// 负载均衡
-	//client.WithTag("Cluster", "student")
-	//client.WithLoadBalancer(loadbalance.NewWeightedRandomBalancer())
-
-	// get the client
-	//cli, err := genericclient.NewClient("student-server", g, client.WithHostPorts("127.0.0.1:9999"))
-	cli, err = genericclient.NewClient("student-server", g, client.WithResolver(r))
+	// get the client from etcd
+	//cli, err := genericclient.NewClient("student-server", g, client.WithHostPorts("127.0.0.1:9999")) // 直接连接
+	cli, err = genericclient.NewClient("student-server", g, client.WithResolver(r),
+		client.WithLoadBalancer(loadbalance.NewWeightedRandomBalancer()))
 	if err != nil {
 		panic(err)
 	}

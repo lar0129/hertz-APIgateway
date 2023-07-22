@@ -30,6 +30,7 @@ func Register(ctx context.Context, c *app.RequestContext) {
 		fmt.Println("error:", err)
 	}
 	fmt.Println("jsonReq:", string(jsonReq))
+
 	// 泛化调用
 	cli := clientprovider.GetGenericClient(&ctx, c).(genericclient.Client)
 	resp, err := cli.GenericCall(ctx, "Register", string(jsonReq))
