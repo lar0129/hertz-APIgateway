@@ -104,7 +104,7 @@ func ListService(ctx context.Context, c *app.RequestContext) {
 
 	resp := new([]*gateway.Service)
 	services := idlmanager.GetAllService()
-	resp = &services
+	resp = services
 
 	c.JSON(consts.StatusOK, resp)
 }

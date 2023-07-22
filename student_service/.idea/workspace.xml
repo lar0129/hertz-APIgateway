@@ -5,48 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df3630dd-17df-4bda-8c2e-f609c5e75d57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/.hz" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/.hz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/service_router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/biz/clientprovider/clientprovider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/clientprovider/clientprovider.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/demo/student_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/demo/student_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/gateway/idl_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/gateway/idl_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_management.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_management.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/teacher/teacher_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/teacher/teacher_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/model/demo/stu.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/model/demo/stu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/model/gateway/gateway.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/model/gateway/gateway.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/demo/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/router/demo/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/demo/stu.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/router/demo/stu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/gateway.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/gateway.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/router/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/hertz.demo" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/hertz.demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../idl/gateway.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/../idl/gateway.thrift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../idl/stu.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/../idl/stu.thrift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/.idea/kitex_service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/build.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/client/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/handler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex.demo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/k-consts.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/k-stu.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/stu.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/studentservice/client.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/studentservice/invoker.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/studentservice/server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_gen/demo/studentservice/studentservice.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/kitex_info.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/output/bin/kitex.demo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/output/bootstrap.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kitex_service/script/bootstrap.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

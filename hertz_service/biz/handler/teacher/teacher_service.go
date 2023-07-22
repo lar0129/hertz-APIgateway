@@ -32,7 +32,7 @@ func Query(ctx context.Context, c *app.RequestContext) {
 	fmt.Println("jsonReq:", string(jsonReq))
 
 	// 泛化调用
-	cli := clientprovider.GetGenericClient(&ctx, c).(genericclient.Client)
+	cli := clientprovider.GetGenericClient("teacher-server").(genericclient.Client)
 	resp, err := cli.GenericCall(ctx, "Query", string(jsonReq))
 
 	c.JSON(consts.StatusOK, resp)

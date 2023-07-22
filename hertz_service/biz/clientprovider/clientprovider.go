@@ -1,8 +1,6 @@
 package clientprovider
 
 import (
-	"context"
-	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/kitex/client"
 	"github.com/cloudwego/kitex/client/genericclient"
 	"github.com/cloudwego/kitex/pkg/generic"
@@ -15,7 +13,7 @@ import (
 var cli genericclient.Client
 
 // 抽象出来的泛化调用方法
-func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response interface{}) {
+func GetGenericClient(serviceName string) (response interface{}) {
 
 	// 解析IDL文件
 
@@ -26,7 +24,7 @@ func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response int
 	// }
 
 	// 动态解析
-	p, err := idl.GetResolvedIdl()
+	p, err := idl.GetResolvedIdl(serviceName)
 	if err != nil {
 		panic(err)
 	}
@@ -36,11 +34,16 @@ func GetGenericClient(ctx *context.Context, c *app.RequestContext) (response int
 	if err != nil {
 		panic(err)
 	}
+
+	// 在 etcd 中服务发现
 	r, err := etcd.NewEtcdResolver([]string{"127.0.0.1:2379"})
+	if err != nil {
+		panic(err)
+	}
 
 	// get the client from etcd
 	//cli, err := genericclient.NewClient("student-server", g, client.WithHostPorts("127.0.0.1:9999")) // 直接连接
-	cli, err = genericclient.NewClient("teacher-server", g, client.WithResolver(r),
+	cli, err = genericclient.NewClient(serviceName, g, client.WithResolver(r),
 		client.WithLoadBalancer(loadbalance.NewWeightedRandomBalancer()))
 	if err != nil {
 		panic(err)

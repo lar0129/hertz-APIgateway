@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// api layer?
 	h := server.Default()
 
 	register(h)

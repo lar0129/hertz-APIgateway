@@ -4,6 +4,7 @@ package main
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
+	"github.com/cloudwego/hertz/pkg/common/hlog"
 	handler "hertz.demo/biz/handler"
 )
 
@@ -12,4 +13,13 @@ func customizedRegister(r *server.Hertz) {
 	r.GET("/ping", handler.Ping)
 
 	// your code ...
+	r.POST("/gateway/:service/:method", handler.CallServiceMethod) //	func(ctx context.Context, c *app.RequestContext) {
+	//	service := c.Param("service")
+	//	method := c.Param("method")
+	//	message := service + "'s method: " + method
+	//	c.String(consts.StatusOK, message)
+	//}
+
+	routeInfo := r.Routes()
+	hlog.Info(routeInfo)
 }
