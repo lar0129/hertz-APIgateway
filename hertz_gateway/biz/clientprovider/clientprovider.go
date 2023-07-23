@@ -6,7 +6,6 @@ import (
 	"github.com/cloudwego/kitex/pkg/generic"
 	"github.com/cloudwego/kitex/pkg/loadbalance"
 	etcd "github.com/kitex-contrib/registry-etcd"
-
 	"hertz.demo/biz/idl"
 )
 
@@ -23,7 +22,7 @@ func GetGenericClient(serviceName string) (response interface{}) {
 	// 	panic(err)
 	// }
 
-	// 动态解析
+	// 动态解析IDL
 	p, err := idl.GetResolvedIdl(serviceName)
 	if err != nil {
 		panic(err)

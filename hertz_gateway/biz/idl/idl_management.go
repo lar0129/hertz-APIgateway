@@ -5,33 +5,33 @@ import (
 )
 
 // idl management platform - backend
-var serviceNameMap = make(map[string]gateway.Service)
+var ServiceNameMap = make(map[string]gateway.Service)
 
 func GetService(serviceName string) *gateway.Service {
-	service := serviceNameMap[serviceName]
+	service := ServiceNameMap[serviceName]
 	return &service
 }
 
 func AddService(service gateway.Service) {
-	if _, ok := serviceNameMap[service.ServiceName]; !ok {
-		serviceNameMap[service.ServiceName] = service
+	if _, ok := ServiceNameMap[service.ServiceName]; !ok {
+		ServiceNameMap[service.ServiceName] = service
 	}
 }
 
 func DeleteService(serviceName string) {
-	delete(serviceNameMap, serviceName)
+	delete(ServiceNameMap, serviceName)
 }
 
 func UpdateService(service gateway.Service) {
-	if _, ok := serviceNameMap[service.ServiceName]; ok {
-		serviceNameMap[service.ServiceName] = service
+	if _, ok := ServiceNameMap[service.ServiceName]; ok {
+		ServiceNameMap[service.ServiceName] = service
 	}
 }
 
 func GetAllService() []*gateway.Service {
 	var services []*gateway.Service
-	for k := range serviceNameMap {
-		service := serviceNameMap[k]
+	for k := range ServiceNameMap {
+		service := ServiceNameMap[k]
 		services = append(services, &service)
 	}
 	return services

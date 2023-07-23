@@ -4,12 +4,14 @@ import (
 	"errors"
 	"github.com/cloudwego/kitex/pkg/generic"
 	"io/ioutil"
+	"time"
 )
 
 func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) {
 	// 动态解析
+	// 做一个IDL文件缓存？
 
-	service, ok := serviceNameMap[serviceName]
+	service, ok := ServiceNameMap[serviceName]
 	if !ok {
 		err := errors.New("service not found")
 		return nil, err
@@ -28,9 +30,17 @@ func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) 
 	p, err := generic.NewThriftContentProvider(string(content), includes)
 	if err != nil {
 		panic(err)
+	} else {
+		// dynamic update
+		// 仅当第一次获取IDL时，才创建新线程用来更新
+		go func() {
+			err = p.UpdateIDL(string(content), includes)
+			if err != nil {
+				panic(err)
+			}
+			time.Sleep(30 * time.Second)
+		}()
 	}
-	// dynamic update
-	err = p.UpdateIDL(string(content), includes)
 
 	return p, err
 }
