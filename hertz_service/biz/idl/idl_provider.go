@@ -1,7 +1,6 @@
 package idl
 
 import (
-	"fmt"
 	"github.com/cloudwego/kitex/pkg/generic"
 	"io/ioutil"
 )
@@ -12,8 +11,6 @@ func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) 
 	service := serviceNameMap[serviceName]
 	path := service.ServiceIdlName
 	content, err := ioutil.ReadFile(path)
-	fmt.Println("path:", path)
-	fmt.Println("content:", string(content))
 
 	if err != nil {
 		panic(err)

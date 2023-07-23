@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df3630dd-17df-4bda-8c2e-f609c5e75d57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/service_router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/clientprovider/clientprovider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/clientprovider/clientprovider.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/demo/student_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/demo/student_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/teacher/teacher_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/handler/teacher/teacher_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../default.etcd/member/snap/db" beforeDir="false" afterPath="$PROJECT_DIR$/../default.etcd/member/snap/db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../default.etcd/member/wal/0000000000000000-0000000000000000.wal" beforeDir="false" afterPath="$PROJECT_DIR$/../default.etcd/member/wal/0000000000000000-0000000000000000.wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_service/hertz.demo" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/hertz.demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service" beforeDir="false" afterPath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu-20.04/home/NJU/cloudWeGo/project/student_service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "go.vgo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/NJU/cloudWeGo/project/teacher_service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="kitex.demo" />
