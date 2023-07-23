@@ -28,10 +28,11 @@ func UpdateService(service gateway.Service) {
 	}
 }
 
-func GetAllService() *[]*gateway.Service {
+func GetAllService() []*gateway.Service {
 	var services []*gateway.Service
-	for _, v := range serviceNameMap {
-		services = append(services, &v)
+	for k := range serviceNameMap {
+		service := serviceNameMap[k]
+		services = append(services, &service)
 	}
-	return &services
+	return services
 }

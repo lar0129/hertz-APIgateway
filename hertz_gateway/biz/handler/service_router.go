@@ -19,9 +19,9 @@ func CallServiceMethod(ctx context.Context, c *app.RequestContext) {
 		return
 	}
 
-	service := c.Param("service")
-	method := c.Param("method")
-	fmt.Println("Call " + service + "'s method: " + method)
+	serviceName := c.Param("service")
+	methodName := c.Param("method")
+	fmt.Println("Call " + serviceName + "'s method: " + methodName)
 
 	// 将请求req参数转换为 JSON
 	jsonReq, err := json.Marshal(req)
@@ -30,9 +30,11 @@ func CallServiceMethod(ctx context.Context, c *app.RequestContext) {
 	}
 	fmt.Println("jsonReq:", string(jsonReq))
 
+	// 获取对应service的客户端
+	cli := clientprovider.GetGenericClient(serviceName).(genericclient.Client)
+
 	// 泛化调用
-	cli := clientprovider.GetGenericClient(service).(genericclient.Client)
-	resp, err := cli.GenericCall(ctx, method, string(jsonReq))
+	resp, err := cli.GenericCall(ctx, methodName, string(jsonReq))
 
 	c.JSON(consts.StatusOK, resp)
 }
