@@ -5,12 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df3630dd-17df-4bda-8c2e-f609c5e75d57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../default.etcd/member/snap/db" beforeDir="false" afterPath="$PROJECT_DIR$/../default.etcd/member/snap/db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../default.etcd/member/wal/0000000000000000-0000000000000000.wal" beforeDir="false" afterPath="$PROJECT_DIR$/../default.etcd/member/wal/0000000000000000-0000000000000000.wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hertz_service/hertz.demo" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_service/hertz.demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/.hz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/clientprovider/clientprovider.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/demo/student_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/gateway/idl_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/ping.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/service_router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/handler/teacher/teacher_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_management.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/idl/idl_provider.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/model/demo/stu.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/model/gateway/gateway.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/model/teacher/teacher.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/demo/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/demo/stu.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/gateway.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/gateway/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/register.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/teacher/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/biz/router/teacher/teacher.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/hertz.demo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/router_gen.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_service/script/bootstrap.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service" beforeDir="false" afterPath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
