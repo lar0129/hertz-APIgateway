@@ -79,7 +79,7 @@
 
 * 运行etcd --log-level debug
 
-2.打开服务端
+2.打开服务端	
 
 * 从根目录打开student_service文件夹（或teacher_service）
 * 运行命令
@@ -97,4 +97,7 @@
 4.用postman或curl命令进行接口测试
 
 * 接口使用示例
+  * 先往IDL管理平台添加服务对应的IDL文件路径（IDL目前为本地文件）
+  * ![image-20230723122836025](https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/AppData/Roaming/Typora/typora-user-images/image-20230723122836025.png)
+  * 再通过网关调用相应server的方法接口
   * ![image-20230723120439639](https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/AppData/Roaming/Typora/typora-user-images/image-20230723120439639.png)
