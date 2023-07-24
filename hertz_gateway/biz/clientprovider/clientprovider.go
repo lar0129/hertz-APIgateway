@@ -8,9 +8,11 @@ import (
 	etcd "github.com/kitex-contrib/registry-etcd"
 	"hertz.demo/biz/idl"
 	"sync"
+	"time"
 )
 
 var clientCache sync.Map
+var cacheTime = make(map[genericclient.Client]time.Time)
 
 // InitGenericClient 抽象出来的泛化调用方法
 func InitGenericClient(serviceName string) (cli genericclient.Client, err error) {
@@ -57,12 +59,23 @@ func InitGenericClient(serviceName string) (cli genericclient.Client, err error)
 func GetCacheClient(serviceName string) (genericclient.Client, error) {
 	if newClient, ok := clientCache.Load(serviceName); ok {
 		oldClient := newClient.(genericclient.Client)
-		return oldClient, nil
+
+		cacheTimeout := 30 * time.Minute
+
+		if time.Since(cacheTime[oldClient]) < cacheTimeout {
+			// 缓存未过期，直接返回
+			return oldClient, nil
+		}
+		// 缓存已过期，删除旧缓存
+		clientCache.Delete(serviceName)
 	}
+
+	// 缓存不存在，创建新缓存
 	newClient, err := InitGenericClient(serviceName)
 	if err != nil {
 		return nil, err
 	}
+	cacheTime[newClient] = time.Now() // 记录缓存时间
 	clientCache.Store(serviceName, newClient)
 	return newClient, nil
 }
