@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
-	"github.com/cloudwego/kitex/client/genericclient"
 	"hertz.demo/biz/clientprovider"
 )
 
@@ -31,7 +30,7 @@ func CallServiceMethod(ctx context.Context, c *app.RequestContext) {
 	fmt.Println("jsonReq:", string(jsonReq))
 
 	// 获取对应service的客户端
-	cli := clientprovider.GetGenericClient(serviceName).(genericclient.Client)
+	cli, err := clientprovider.GetCacheClient(serviceName)
 
 	// 泛化调用
 	resp, err := cli.GenericCall(ctx, methodName, string(jsonReq))

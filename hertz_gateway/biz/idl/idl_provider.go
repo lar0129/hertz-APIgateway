@@ -1,33 +1,25 @@
 package idl
 
 import (
-	"errors"
 	"github.com/cloudwego/kitex/pkg/generic"
-	"io/ioutil"
+	"sync"
 	"time"
 )
+
+var idlCache sync.Map
 
 func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) {
 	// 动态解析
 	// 做一个IDL文件缓存？
 
-	service, ok := ServiceNameMap[serviceName]
-	if !ok {
-		err := errors.New("service not found")
-		return nil, err
-	}
-	path := service.ServiceIdlName
-	content, err := ioutil.ReadFile(path)
-
-	if err != nil {
-		panic(err)
-	}
+	path := GetIdlPath(serviceName)
+	content := GetIdlContent(serviceName)
 	includes := map[string]string{
-		path: string(content),
+		path: content,
 	}
 	// fmt.Println("includes:", includes)
 
-	p, err := generic.NewThriftContentProvider(string(content), includes)
+	p, err := generic.NewThriftContentProvider(content, includes)
 	if err != nil {
 		panic(err)
 	} else {
@@ -43,4 +35,18 @@ func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) 
 	}
 
 	return p, err
+}
+
+// GetCacheIdl 缓存解析后的IDL内容
+func GetCacheIdl(serviceName string) (*generic.ThriftContentProvider, error) {
+	if idl, ok := idlCache.Load(serviceName); ok {
+		oldIdl := idl.(*generic.ThriftContentProvider)
+		return oldIdl, nil
+	}
+	idl, err := GetResolvedIdl(serviceName)
+	if err != nil {
+		return nil, err
+	}
+	idlCache.Store(serviceName, idl)
+	return idl, nil
 }

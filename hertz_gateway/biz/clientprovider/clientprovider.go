@@ -7,12 +7,13 @@ import (
 	"github.com/cloudwego/kitex/pkg/loadbalance"
 	etcd "github.com/kitex-contrib/registry-etcd"
 	"hertz.demo/biz/idl"
+	"sync"
 )
 
-var cli genericclient.Client
+var clientCache sync.Map
 
-// 抽象出来的泛化调用方法
-func GetGenericClient(serviceName string) (response interface{}) {
+// InitGenericClient 抽象出来的泛化调用方法
+func InitGenericClient(serviceName string) (cli genericclient.Client, err error) {
 
 	// 解析IDL文件
 
@@ -23,7 +24,7 @@ func GetGenericClient(serviceName string) (response interface{}) {
 	// }
 
 	// 动态解析IDL
-	p, err := idl.GetResolvedIdl(serviceName)
+	p, err := idl.GetCacheIdl(serviceName)
 	if err != nil {
 		panic(err)
 	}
@@ -49,5 +50,19 @@ func GetGenericClient(serviceName string) (response interface{}) {
 	}
 
 	// resp is a client
-	return cli
+	return cli, err
+}
+
+// GetCacheClient 缓存泛化调用客户端
+func GetCacheClient(serviceName string) (genericclient.Client, error) {
+	if newClient, ok := clientCache.Load(serviceName); ok {
+		oldClient := newClient.(genericclient.Client)
+		return oldClient, nil
+	}
+	newClient, err := InitGenericClient(serviceName)
+	if err != nil {
+		return nil, err
+	}
+	clientCache.Store(serviceName, newClient)
+	return newClient, nil
 }

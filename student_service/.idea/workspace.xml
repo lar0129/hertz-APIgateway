@@ -6,9 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="df3630dd-17df-4bda-8c2e-f609c5e75d57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/clientprovider/clientprovider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/biz/clientprovider/clientprovider.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/handler/demo/student_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/handler/service_router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/biz/handler/service_router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/handler/teacher/teacher_service.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/idl/idl_management.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/biz/idl/idl_management.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/idl/idl_provider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/biz/idl/idl_provider.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/router/demo/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/router/demo/stu.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/router/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/biz/router/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/router/teacher/middleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/biz/router/teacher/teacher.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hertz_gateway/hertz.demo" beforeDir="false" afterPath="$PROJECT_DIR$/../hertz_gateway/hertz.demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teacher_service/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/../teacher_service/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teacher_service/kitex_info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../teacher_service/kitex_info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service" beforeDir="false" afterPath="$PROJECT_DIR$/../teacher_service/output/bin/teacher-service1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

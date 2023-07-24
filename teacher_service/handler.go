@@ -13,7 +13,7 @@ type TeacherServiceImpl struct{}
 func (s *TeacherServiceImpl) Query(ctx context.Context, req *teacher.QueryReq) (resp *teacher.Teacher, err error) {
 	// TODO: Your code here...
 	resp = &teacher.Teacher{
-		Name: req.Name,
+		Name: "Teacher's Name: " + req.Name,
 	}
 	return
 }
