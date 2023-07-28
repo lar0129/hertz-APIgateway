@@ -15,11 +15,13 @@ func main() {
 	h.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"*"},
 		AllowMethods:     []string{"PUT", "PATCH"},
-		AllowHeaders:     []string{"Origin"},
+		AllowHeaders:     []string{"Origin", "Content-Type", "X-Auth-Token"},
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 		MaxAge:           12 * time.Hour,
 	}))
+
+	register(h)
 
 	h.Spin()
 }
