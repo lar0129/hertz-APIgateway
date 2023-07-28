@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	addr, _ := net.ResolveTCPAddr("tcp", ":9998")
+	addr, _ := net.ResolveTCPAddr("tcp", ":9997")
 	r, err := etcd.NewEtcdRegistry([]string{"127.0.0.1:2379"})
 	if err != nil {
 		log.Fatal(err)

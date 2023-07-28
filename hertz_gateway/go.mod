@@ -8,6 +8,7 @@ require (
 	github.com/apache/thrift v0.13.0
 	github.com/cloudwego/hertz v0.6.6
 	github.com/cloudwego/kitex v0.6.1
+	github.com/hertz-contrib/cors v0.0.0-20230423034624-2bc83a8400f0
 	github.com/kitex-contrib/registry-etcd v0.1.0
 )
 
