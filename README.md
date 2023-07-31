@@ -213,10 +213,56 @@ sh output/bootstrap.sh
 
 ![image-20230723120718797](https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/AppData/Roaming/Typora/typora-user-images/image-20230723120718797.png)
 
-* HTTP约定 : \<IP address>/gateway/ServiceName/MethodName
+* HTTP约定 : POST：\<IP address>/gateway/ServiceName/MethodName
   * ServiceName为在etcd注册中心注册使用的名字
   * MethodName必须与微服务中的方法名大小写一致
   * 目前只支持POST类型请求
+
+* IDL管理平台接口约定（目前只支持POST类型请求）：
+
+  * 增：\<IP address>/add-service
+
+    * Body例：
+
+      ```json
+      { 
+       "serviceName" : "teacher-server",
+       "serviceIdl" : "../idl/teacher.thrift",
+       "serviceIdlContent" : "teacher's IDL" 
+      }
+      ```
+
+  * 删：\<IP address>/delete-service
+
+    * Body例：
+
+      ```json
+      { "serviceName" : "teacher-server"}
+      ```
+
+  * 改：\<IP address>/update-service
+
+    * Body例：
+
+      ```json
+      { 
+          "serviceName" : "teacher-server",
+      	"serviceIdl" : "../idl/teacher.thrift",
+      	"serviceIdlContent" : "idl2"
+      }
+      ```
+
+  * 查：\<IP address>/get-service
+
+    * Body例：
+
+      ```json
+      { "serviceName" : "teacher-server"}
+      ```
+
+  * 查询所有IDL：\<IP address>/list-service
+
+
 
 ### 3.2. 扩展功能
 
