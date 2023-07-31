@@ -1,14 +1,15 @@
 package clientprovider
 
 import (
+	"sync"
+	"time"
+
 	"github.com/cloudwego/kitex/client"
 	"github.com/cloudwego/kitex/client/genericclient"
 	"github.com/cloudwego/kitex/pkg/generic"
 	"github.com/cloudwego/kitex/pkg/loadbalance"
 	etcd "github.com/kitex-contrib/registry-etcd"
 	"hertz.demo/biz/idl"
-	"sync"
-	"time"
 )
 
 var clientCache sync.Map
@@ -18,12 +19,6 @@ var cacheTime = make(map[genericclient.Client]time.Time)
 func InitGenericClient(serviceName string) (cli genericclient.Client, err error) {
 
 	// 解析IDL文件
-
-	// 直接解析
-	// p, err := generic.NewThriftFileProvider("idl/stu.thrift")
-	// if err != nil {
-	// 	panic(err)
-	// }
 
 	// 动态解析IDL
 	p, err := idl.GetCacheIdl(serviceName)

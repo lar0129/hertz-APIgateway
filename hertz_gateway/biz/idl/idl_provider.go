@@ -1,9 +1,10 @@
 package idl
 
 import (
-	"github.com/cloudwego/kitex/pkg/generic"
 	"sync"
 	"time"
+
+	"github.com/cloudwego/kitex/pkg/generic"
 )
 
 var idlCache sync.Map
@@ -11,7 +12,6 @@ var cacheTime = make(map[*generic.ThriftContentProvider]time.Time)
 
 func GetResolvedIdl(serviceName string) (*generic.ThriftContentProvider, error) {
 	// 动态解析
-	// 做一个IDL文件缓存？
 
 	path := GetIdlPath(serviceName)
 	content := GetIdlContent(serviceName)
