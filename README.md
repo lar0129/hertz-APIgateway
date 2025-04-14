@@ -1,5 +1,3 @@
-Okay, here is the English translation of the provided Markdown, keeping the format, images, links, and code snippets intact:
-
 # hertz-API-gateway
 
 ## 1\. Overview
